@@ -4,6 +4,47 @@ import Col from 'react-bootstrap/Col';
 import NextButton from "../NextButton/NextButton";
 import './SelectTime.css';
 
+const getTimeSelectors = meeting => {
+    if (meeting === undefined || meeting === null) {
+        return (<div className="mt-4">
+            <Row className="text-left font-weight-bold ml-4">
+                <Col>
+                    Friday, November 20, 2020
+                </Col>
+            </Row>
+            <Row className="text-left ml-4 mb-3">
+                <Col>
+                    A time picker at some point
+                </Col>
+            </Row>
+
+            <Row className="text-left font-weight-bold ml-4">
+                <Col>
+                    Monday, November 23, 2020
+                </Col>
+            </Row>
+            <Row className="text-left ml-4 mb-3">
+                <Col>
+                    A time picker at some point
+                </Col>
+            </Row>
+
+            <Row className="text-left font-weight-bold ml-4">
+                <Col>
+                    Tuesday, November 23, 2020
+                </Col>
+            </Row>
+            <Row className="text-left ml-4 mb-3">
+                <Col>
+                    A time picker at some point
+                </Col>
+            </Row>
+        </div>);
+    } else {
+        return (<div>Date pickers go here!</div>);
+    }
+}
+
 const SelectTime = props =>
         <div>
             <Row className="font-weight-bold text-left ml-2 mr-2">
@@ -25,6 +66,9 @@ const SelectTime = props =>
                     Customize times for each day
                 </Col>
             </Row>
+
+            { getTimeSelectors(props.meeting) }
+
             <Row>
                 <Col>
                     <NextButton to="/confirm-meeting" />
