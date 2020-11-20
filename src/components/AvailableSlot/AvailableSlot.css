@@ -1,0 +1,9 @@
+.available-slot {
+    background-color: lightgray;
+    width: 50%;
+    margin: auto;
+}
+
+.available-slot .selected {
+    background-color: darkgray;
+}
