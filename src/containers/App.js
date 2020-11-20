@@ -23,6 +23,7 @@ import MeetingManager from "./MeetingManager/MeetingManager";
 import CalendarImporter from "./CalendarImporter/CalendarImporter";
 import Home from './Home/Home';
 import UsdsLogo from "../components/UsdsLogo/UsdsLogo";
+import AddToCalendar from "../components/AddToCalendar/AddToCalendar";
 
 class App extends Component {
     state = {
@@ -108,6 +109,7 @@ class App extends Component {
                             <Route path="/select-times" component={SelectTime} />
                             <Route path="/confirm-meeting" component={ConfirmMeeting} />
                             <Route path="/share-meeting" component={ShareMeeting} />
+                            <Route path="/add-to-calendar" component={AddToCalendar} />
                             <Route path="/schedule-a-meeting" component={Scheduler}/>
                             <Route path="/manage-a-meeting">
                                 <MeetingManager meetings={this.state.meetings} />

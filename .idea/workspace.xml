@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="281e5104-e2a7-48fa-a1f8-fa3e8f21c970" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/services/MeetingService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AddToCalendar/AddToCalendar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AddToCalendar/AddToCalendar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ConfirmMeeting/ConfirmMeeting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConfirmMeeting/ConfirmMeeting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SelectTime/SelectTime.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SelectTime/SelectTime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +65,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605807121290</updated>
-      <workItem from="1605807124268" duration="32528000" />
+      <workItem from="1605807124268" duration="33732000" />
     </task>
     <servers />
   </component>
