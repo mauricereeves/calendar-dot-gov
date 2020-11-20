@@ -3,6 +3,14 @@ import { Link } from 'react-router-dom';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+const getLink = meeting => {
+    if (meeting.canEdit) {
+        return <Link to={`/edit-meeting/${meeting.id}`}>Edit Meeting</Link>
+    } else {
+        return <Link to={`/meeting-status/${meeting.id}`}>Review Meeting</Link>
+    }
+}
+
 const Meetings = props => {
     console.log(props);
     return (
@@ -13,7 +21,7 @@ const Meetings = props => {
                         <Row>
                             <Col>{meeting.meetingName}</Col>
                             <Col>
-                                <Link to={`/edit-meeting/${meeting.id}`}>Edit Meeting</Link>
+                                { getLink(meeting) }
                             </Col>
                         </Row>
                     </div>

@@ -24,6 +24,7 @@ import CalendarImporter from "./CalendarImporter/CalendarImporter";
 import Home from './Home/Home';
 import UsdsLogo from "../components/UsdsLogo/UsdsLogo";
 import AddToCalendar from "../components/AddToCalendar/AddToCalendar";
+import MeetingStatus from "../components/MeetingStatus/MeetingStatus";
 
 class App extends Component {
     state = {
@@ -34,6 +35,49 @@ class App extends Component {
                 createdBy: 'Firstname Lastname',
                 description: 'Meeting description lorem ipsum dolor sit amet, consectetur adipiscing elit',
                 recurring: false,
+                canEdit: true,
+                availableSlots: [
+                    {
+                        id: 0,
+                        start: '12:00pm',
+                        end: '1:00pm',
+                        timezone: 'EST',
+                        date: moment('11/20/2020'),
+                        isSelected: false
+                    },
+                    {
+                        id: 1,
+                        start: '2:30pm',
+                        end: '3:30pm',
+                        timezone: 'EST',
+                        date: moment('11/20/2020'),
+                        isSelected: false
+                    },
+                    {
+                        id: 2,
+                        start: '12:00pm',
+                        end: '1:00pm',
+                        timezone: 'EST',
+                        date: moment('11/23/2020'),
+                        isSelected: false
+                    },
+                    {
+                        id: 3,
+                        start: '3:30pm',
+                        end: '4:30pm',
+                        timezone: 'EST',
+                        date: moment('11/23/2020'),
+                        isSelected: false
+                    }
+                ],
+            },
+            {
+                id: 1,
+                meetingName: 'Hackathon Presentation',
+                createdBy: 'Firstname Lastname',
+                description: 'Meeting description lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                recurring: false,
+                canEdit: false,
                 availableSlots: [
                     {
                         id: 0,
@@ -110,6 +154,9 @@ class App extends Component {
                             <Route path="/confirm-meeting" component={ConfirmMeeting} />
                             <Route path="/share-meeting" component={ShareMeeting} />
                             <Route path="/add-to-calendar" component={AddToCalendar} />
+                            <Route path="/meeting-status/:meetingId?">
+                                <MeetingStatus meetings={this.state.meetings} />
+                            </Route>
                             <Route path="/schedule-a-meeting" component={Scheduler}/>
                             <Route path="/manage-a-meeting">
                                 <MeetingManager meetings={this.state.meetings} />
